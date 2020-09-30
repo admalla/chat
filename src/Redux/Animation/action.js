@@ -1,14 +1,14 @@
-export default function initialAnimation(){
-  return dispatch => {
+export default function initialAnimation() {
+  return (dispatch) => {
     dispatch({
-      type: 'set_mic_send'
+      type: "set_mic_send",
     });
-  }
+  };
 }
-export function backMic(){
-  return dispatch => {
+export function backMic() {
+  return (dispatch) => {
     dispatch({
-      type: 'set_back_mic'
-    })
-  }
+      type: "set_back_mic",
+    });
+  };
 }

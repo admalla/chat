@@ -1,18 +1,15 @@
 const initialMessages = {
   loading: true,
   items: [],
-  searchString: '',
+  searchString: "",
   loadMessage: true,
-  message: '',
-  content: '',
-  type: '',
-  profile: false
+  message: "",
+  content: "",
+  type: "",
+  profile: false,
 };
 
-export default function messages(
-  state = initialMessages,
-  action
-) {
+export default function messages(state = initialMessages, action) {
   switch (action.type) {
     case "load_messages_start":
       return {
@@ -24,58 +21,54 @@ export default function messages(
       return {
         ...state,
         loading: false,
-        items: action.payload
+        items: action.payload,
       };
 
-    case 'set_search_string':
+    case "set_search_string":
       return {
         ...state,
-        searchString: action.payload
-      }
+        searchString: action.payload,
+      };
 
-    case 'send_message_start':
+    case "send_message_start":
       return {
         ...state,
-        loadMessage: true
-      }
+        loadMessage: true,
+      };
 
-    case 'send_message_success':
+    case "send_message_success":
       return {
         ...state,
         loadMessage: false,
-        items: [
-          ...state.items,
-          action.payload
-        ],
-        content: ''
-      }
+        items: [...state.items, action.payload],
+        content: "",
+      };
 
-    case 'sent_content':
+    case "sent_content":
       return {
         ...state,
-        content: action.payload
-      }
+        content: action.payload,
+      };
 
-    case 'type_message':
+    case "type_message":
       return {
         ...state,
-        type: action.payload
-      }
+        type: action.payload,
+      };
 
-    case 'get_bar_profile':
+    case "get_bar_profile":
       return {
         ...state,
-        profile: true
-      }
+        profile: true,
+      };
 
-    case 'hide_profile':
+    case "hide_profile":
       return {
         ...state,
-        profile: false
-      }
+        profile: false,
+      };
 
     default:
       return state;
   }
 }
-

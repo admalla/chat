@@ -2,10 +2,10 @@ const initialContacts = {
   loading: true,
   items: [],
   loadContact: true,
-  contact: '',
-  searchString: '',
-  colorContact: '',
-  profile: {}
+  contact: "",
+  searchString: "",
+  colorContact: "",
+  profile: {},
 };
 
 export default function contacts(state = initialContacts, action) {
@@ -23,36 +23,36 @@ export default function contacts(state = initialContacts, action) {
         items: action.payload,
       };
 
-    case 'load_contact_start':
+    case "load_contact_start":
       return {
         ...state,
-        loadContact: true
+        loadContact: true,
       };
 
-    case 'load_contact_success':
+    case "load_contact_success":
       return {
         ...state,
         loadContact: false,
-        contact: action.payload
-      }
+        contact: action.payload,
+      };
 
-    case 'set_search_string':
+    case "set_search_string":
       return {
         ...state,
-        searchString: action.payload
-      }
+        searchString: action.payload,
+      };
 
-    case 'set_color_contact':
+    case "set_color_contact":
       return {
         ...state,
-        colorContact: action.payload
-      }
+        colorContact: action.payload,
+      };
 
-    case 'get_profile':
+    case "get_profile":
       return {
         ...state,
-        profile: action.payload
-      }
+        profile: action.payload,
+      };
 
     default:
       return state;

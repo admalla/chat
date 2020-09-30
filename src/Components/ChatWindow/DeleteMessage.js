@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function DeleteMessage() {
   return (
-    <div className='btn-delete'>
-      <button>
-        delete
-      </button>
+    <div className="btn-delete">
+      <button>delete</button>
     </div>
   );
 }

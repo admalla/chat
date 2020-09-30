@@ -2,9 +2,7 @@ export default function loadingMessages(myId, contactId) {
   return (dispatch) => {
     dispatch({ type: "load_messages_start" });
 
-    fetch(
-      `http://151.248.117.7:8001/api/messages/${myId}/${contactId}`
-    )
+    fetch(`http://151.248.117.7:8001/api/messages/${myId}/${contactId}`)
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -15,60 +13,62 @@ export default function loadingMessages(myId, contactId) {
   };
 }
 
-export function setSearchString(string){
+export function setSearchString(string) {
   return {
-    type: 'set_search_string',
-    payload: string
-  }
+    type: "set_search_string",
+    payload: string,
+  };
 }
 
-export function sentMessage (myId, contactId, content, type){
-  return dispatch => {
-    dispatch({type: 'send_message_start'});
+export function sentMessage(myId, contactId, content, type) {
+  return (dispatch) => {
+    dispatch({ type: "send_message_start" });
 
-    fetch('http://151.248.117.7:8001/api/messages', {
-      method: 'Post',
+    fetch("http://151.248.117.7:8001/api/messages", {
+      method: "Post",
       headers: {
-        Accept: 'application/json',
-        'Content-type': 'application/json'
+        Accept: "application/json",
+        "Content-type": "application/json",
       },
       body: JSON.stringify({
         myId,
         contactId,
-        type: 'text',
-        content
+        type: "text",
+        content,
       }),
     })
-      .then((response => response.json()))
-      .then(json => dispatch({
-        type: 'send_message_success',
-        payload: json
-      }))
-  }
+      .then((response) => response.json())
+      .then((json) =>
+        dispatch({
+          type: "send_message_success",
+          payload: json,
+        })
+      );
+  };
 }
 
-export function sentContent(string){
+export function sentContent(string) {
   return {
-    type: 'sent_content',
-    payload: string
-  }
+    type: "sent_content",
+    payload: string,
+  };
 }
 
-export function typeMessage(string){
+export function typeMessage(string) {
   return {
-    type: 'type_message',
-    payload: string
-  }
+    type: "type_message",
+    payload: string,
+  };
 }
 
 export function showProfile() {
   return {
-    type: 'get_bar_profile'
-  }
+    type: "get_bar_profile",
+  };
 }
 
 export function hideProfile() {
   return {
-    type: 'hide_profile'
-  }
+    type: "hide_profile",
+  };
 }
