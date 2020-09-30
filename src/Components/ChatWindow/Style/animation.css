@@ -1,0 +1,33 @@
+.my-style-enter {
+  opacity: 0;
+
+}
+.my-style-enter-active {
+  opacity: 0;
+  transition: opacity 200ms
+}
+.my-style-exit {
+  opacity: 1;
+}
+.my-style-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+my-mic-enter {
+  opacity: 0;
+
+}
+.my-mic-enter-active {
+  opacity: 0;
+  transition: opacity 200ms;
+
+}
+.my-mic-exit {
+  opacity: 1;
+
+}
+.my-mic-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

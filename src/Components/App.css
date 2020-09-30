@@ -1,0 +1,13 @@
+.body {
+  display: flex;
+  overflow-x: hidden;
+
+}
+.please {
+  margin: auto;
+}
+.flx-blocks {
+  display: flex;
+  position: relative;
+  width: 100%;
+}

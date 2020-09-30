@@ -1,0 +1,49 @@
+.search-message {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 10px;
+}
+.search-message div {
+  background-color: white;
+  padding: 5px 0 5px 10px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.search-message div span {
+  vertical-align: middle;
+  font-size: 1.3em;
+  color: grey;
+}
+.search-message input {
+  border: none;
+  outline: none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  width: 150px;
+}
+.search-message b {
+  margin: auto;
+}
+
+.user-in-header {
+  margin: auto;
+}
+
+#user-online-header {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: chartreuse;
+  box-shadow: 0 0 0 1px white;
+  display: inline-block;
+}
+
+#settings {
+  margin-right: 10px;
+}
+
+#settings.material-icons:hover {
+  cursor: pointer;
+}
