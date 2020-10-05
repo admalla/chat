@@ -1,0 +1,12 @@
+.circle {
+  margin-right: 10px;
+}
+
+.skeleton-mrg-top {
+  margin-top: 50px;
+}
+
+.skeleton {
+  display: flex;
+  padding: 10px;
+}

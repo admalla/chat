@@ -1,0 +1,61 @@
+.input {
+  display: flex;
+  color: grey;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-right: 10px;
+  border-top: 1px solid lightgrey;
+}
+.input div {
+  background-color: white;
+  padding: 5px 5px 5px 10px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.input input {
+  border: none;
+  width: 100%;
+  padding-top: 10px;
+  outline: none;
+}
+.input div span {
+  vertical-align: middle;
+}
+.input span {
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+/*.send {*/
+/*  opacity: 1;*/
+/*  transform: scale(1);*/
+/*  transition: opacity 500ms, transform 500ms;*/
+/*}*/
+
+.send:hover {
+  cursor: pointer;
+}
+
+/*.mic {*/
+/*  opacity: 1;*/
+/*  transform: scale(1);*/
+/*  transition: opacity 500ms, transform 500ms;*/
+/*}*/
+
+.enter {
+  opacity: 0;
+}
+
+.enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+}
+
+.exit {
+  opacity: 0;
+}
+
+.exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}

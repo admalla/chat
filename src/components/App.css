@@ -1,0 +1,12 @@
+.body {
+  display: flex;
+}
+.please {
+  margin-top: 50vh;
+  text-align: center;
+}
+.flx-blocks {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
