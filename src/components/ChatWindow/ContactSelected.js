@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Content from "./Content";
 
@@ -11,16 +11,14 @@ function ContactSelected() {
       elem.content.toUpperCase().indexOf(searchMessage.toUpperCase()) !== -1
   );
 
-//перестал работать!....
-setTimeout((document.location.href = "#bottom"), 10)
-
+  useEffect(() => document.getElementById("bottom").scrollIntoView(false), []);
 
   return (
     <div className="scrol-messages">
       {filterContact.map((message) => {
-        return <Content message={message}/>
+        return <Content message={message} />;
       })}
-      <div id="bottom"></div>
+      <div id="bottom" />
     </div>
   );
 }

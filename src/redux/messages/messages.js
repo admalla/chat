@@ -7,7 +7,8 @@ const initialMessages = {
   type: "",
   contactToHeader: "",
   opened: "",
-  btnDelete: ""
+  btnDelete: "",
+  deleting: false
 };
 
 export default function messages(state = initialMessages, action) {
@@ -57,6 +58,23 @@ export default function messages(state = initialMessages, action) {
       return {
         ...state,
         btnDelete: action.payload
+      }
+
+    // case "delete/load/start":
+    //   return {
+    //     ...state,
+    //     deleting: true
+    //   }
+
+    // case "delete/load/success":
+    case "message/delete":
+      return {
+        ...state,
+        items: state.items.filter(item => {
+          if(item._id === action.payload) {
+            return false
+          } return true
+        })
       }
 
     default:

@@ -45,7 +45,7 @@ function RightSideMessage({ message }) {
                 <span className="material-icons done-icon">done</span>
               )}
             </span>
-            {(button === message._id) && <DeleteMessage/>}
+            {(button === message._id) && <DeleteMessage message={message}/>}
           </div>
         </div>
       );

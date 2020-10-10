@@ -5,7 +5,7 @@ import "./Side-bar.css";
 import loadingContacts from "../../redux/contacts/action";
 import { useDispatch, useSelector } from "react-redux";
 import Preloader from "./PreLoader/Preloader";
-import {getProfile} from "../../redux/profile/action";
+import { getProfile } from "../../redux/profile/action";
 
 function SideBar() {
   const dispatch = useDispatch();

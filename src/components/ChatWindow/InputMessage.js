@@ -55,21 +55,19 @@ function InputMessage() {
 
       <span className="material-icons">attach_file</span>
 
-      <SwitchTransition mode={mic}>
+      <SwitchTransition>
         <CSSTransition
-          timeout={500}
-        >
-          <span className="material-icons mic">mic</span>
-        </CSSTransition>
-      </SwitchTransition>
-
-      <SwitchTransition mode={send}>
-        <CSSTransition
-          timeout={500}
-        >
-          <span className="material-icons send" onClick={handleOnClick}>
+          addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+          key={mic ? <span className="material-icons mic">mic</span> :
+            <span className="material-icons send" onClick={handleOnClick}>
             send
-          </span>
+          </span>}
+          classNames='f'
+        >
+          {mic ? <span className="material-icons">mic</span> :
+            <span className="material-icons" onClick={handleOnClick}>
+            send
+          </span>}
         </CSSTransition>
       </SwitchTransition>
 

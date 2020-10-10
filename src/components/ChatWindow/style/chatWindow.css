@@ -1,6 +1,6 @@
 .chatWindow {
   width: 100%;
-  padding-right: 30px;
+  padding: 10px 30px 0 0;
 }
 .mini-avatar {
   margin-top: 10px;

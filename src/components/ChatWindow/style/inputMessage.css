@@ -42,20 +42,20 @@
 /*  transition: opacity 500ms, transform 500ms;*/
 /*}*/
 
-.enter {
+f.enter {
   opacity: 0;
 }
 
-.enter-active {
+f.enter-active {
   opacity: 1;
   transition: opacity 500ms ease-out;
 }
 
-.exit {
-  opacity: 0;
+f.exit {
+  opacity: 1;
 }
 
-.exit-active {
+f.exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }

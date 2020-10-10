@@ -5,7 +5,7 @@ export default function loadingMessages(myId, contact) {
       payload: contact
     });
 
-    fetch(`http://151.248.117.7:8001/api/messages/${myId}/${contact._id}`)
+    fetch(`https://api.intocode.ru:8001/api/messages/${myId}/${contact._id}`)
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -20,7 +20,7 @@ export function sentMessage(myId, contactId, content, type) {
   return (dispatch) => {
     dispatch({ type: "message/send" });
 
-    fetch("http://151.248.117.7:8001/api/messages", {
+    fetch("https://api.intocode.ru:8001/api/messages", {
       method: "Post",
       headers: {
         Accept: "application/json",
@@ -60,6 +60,13 @@ export function typeMessage(string) {
 export function setBtnDelete(id) {
   return {
     type: "delete/btn/set",
+    payload: id
+  }
+}
+
+export function setDelete(id) {
+  return {
+    type: "message/delete",
     payload: id
   }
 }
