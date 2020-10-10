@@ -3,11 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import loadingMessages from "../../redux/messages/action";
 import moment from "moment";
 import Avatar from "./Avatar";
+import { useParams } from "react-router-dom";
 
 function Contact({ contact }) {
   const opened = useSelector((state) => state.messages.opened);
   const profile = useSelector((state) => state.profileContact.profile);
   const dispatch = useDispatch();
+
+  const { fullname } = useParams()
 
   const handleClick = () => {
     if (contact.lastMessage) {
