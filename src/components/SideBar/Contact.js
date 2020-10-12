@@ -3,25 +3,27 @@ import { useDispatch, useSelector } from "react-redux";
 import loadingMessages from "../../redux/messages/action";
 import moment from "moment";
 import Avatar from "./Avatar";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 function Contact({ contact }) {
-  const opened = useSelector((state) => state.messages.opened);
   const profile = useSelector((state) => state.profileContact.profile);
   const dispatch = useDispatch();
+  const history = useHistory()
+  const { id } = useParams()
 
-  const { fullname } = useParams()
+  console.log(id)
 
   const handleClick = () => {
     if (contact.lastMessage) {
       dispatch(loadingMessages(profile._id, contact));
     }
+    history.push(contact._id)
   };
 
   return (
     <div
       id="contact"
-      className={opened === contact._id && "selected"}
+      className={id === contact._id && "selected"}
       onClick={handleClick}
     >
       <Avatar contact={contact} />

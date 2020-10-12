@@ -6,7 +6,6 @@ const initialMessages = {
   content: "",
   type: "",
   contactToHeader: "",
-  opened: "",
   btnDelete: "",
   deleting: false
 };
@@ -18,7 +17,6 @@ export default function messages(state = initialMessages, action) {
         ...state,
         loading: true,
         contactToHeader: action.payload,
-        opened: action.payload._id
       };
 
     case "messages/load/success":
@@ -60,13 +58,6 @@ export default function messages(state = initialMessages, action) {
         btnDelete: action.payload
       }
 
-    // case "delete/load/start":
-    //   return {
-    //     ...state,
-    //     deleting: true
-    //   }
-
-    // case "delete/load/success":
     case "message/delete":
       return {
         ...state,

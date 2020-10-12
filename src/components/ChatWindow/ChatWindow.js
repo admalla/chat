@@ -10,10 +10,10 @@ import {useSelector} from "react-redux";
 function ChatWindow() {
   const loading = useSelector(state => state.messages.loading);
 
-  console.log(document.getElementById('q'))
+
 
   return (
-    <div id='q' className="chatWindow">
+    <div className="chatWindow">
       {loading ? (
         <div className="please">
           <b>Please, select a chat to start messaging</b>

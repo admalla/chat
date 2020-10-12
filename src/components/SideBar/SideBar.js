@@ -6,7 +6,7 @@ import loadingContacts from "../../redux/contacts/action";
 import { useDispatch, useSelector } from "react-redux";
 import Preloader from "./PreLoader/Preloader";
 import { getProfile } from "../../redux/profile/action";
-import { Route } from "react-router-dom";
+import  { Switch, Route } from "react-router-dom";
 
 function SideBar() {
   const dispatch = useDispatch();
@@ -20,11 +20,7 @@ function SideBar() {
   return (
       <div className="Side-bar">
         <Search />
-        {loading ? <Preloader /> : (
-          <Route path="/contacts/: name?">
-            <Contacts/>
-          </Route>
-        ) }
+        {loading ? <Preloader /> : <Contacts/>}
       </div>
   );
 }
